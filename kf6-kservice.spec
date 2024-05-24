@@ -39,6 +39,7 @@ Requires:	kf6-kconfig >= %{version}
 Requires:	kf6-kcoreaddons >= %{version}
 Requires:	kf6-kdbusaddons >= %{version}
 Requires:	kf6-ki18n >= %{version}
+Obsoletes:	kf5-%{kfname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt6dir		%{_libdir}/qt6
@@ -56,6 +57,7 @@ Requires:	%{name} = %{version}-%{release}
 Requires:	cmake >= 3.16
 Requires:	kf6-kconfig-devel >= %{version}
 Requires:	kf6-kcoreaddons-devel >= %{version}
+Obsoletes:	kf5-%{kfname}-devel < %{version}
 
 %description devel
 Header files for %{kfname} development.
