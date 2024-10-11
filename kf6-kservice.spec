@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.6
+%define		kdeframever	6.7
 %define		qtver		5.15.2
 %define		kfname		kservice
 
 Summary:	Plugin framework for desktop services
 Name:		kf6-%{kfname}
-Version:	6.6.0
+Version:	6.7.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	76bacd26f7d922065cc858c1e771ad6b
+# Source0-md5:	e2f2b7062c027b06afc560e5feca3b39
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel >= %{qtver}
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -108,6 +108,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man8/kbuildsycoca6.8*
 %{_mandir}/nl/man8/kbuildsycoca6.8*
 %{_mandir}/pt_BR/man8/kbuildsycoca6.8*
+%{_mandir}/sl/man8/kbuildsycoca6.8*
 %{_mandir}/tr/man8/kbuildsycoca6.8*
 %{_mandir}/uk/man8/kbuildsycoca6.8*
 
