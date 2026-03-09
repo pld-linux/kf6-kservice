@@ -7,12 +7,12 @@
 
 Summary:	Plugin framework for desktop services
 Name:		kf6-%{kfname}
-Version:	6.23.0
+Version:	6.23.1
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	bc5d5ec03447e31ac1cb3390e31d8e0e
+# Source0-md5:	a2a26413473f429108002c3774f847f4
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel >= %{qtver}
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -22,12 +22,12 @@ BuildRequires:	Qt6Xml-devel >= %{qtver}
 BuildRequires:	bison >= 3.0
 BuildRequires:	cmake >= 3.16
 BuildRequires:	flex
-BuildRequires:	kf6-extra-cmake-modules >= %{version}
-BuildRequires:	kf6-kconfig-devel >= %{version}
-BuildRequires:	kf6-kcoreaddons-devel >= %{version}
-BuildRequires:	kf6-kdbusaddons-devel >= %{version}
-BuildRequires:	kf6-kdoctools-devel >= %{version}
-BuildRequires:	kf6-ki18n-devel >= %{version}
+BuildRequires:	kf6-extra-cmake-modules >= %{kdeframever}
+BuildRequires:	kf6-kconfig-devel >= %{kdeframever}
+BuildRequires:	kf6-kcoreaddons-devel >= %{kdeframever}
+BuildRequires:	kf6-kdbusaddons-devel >= %{kdeframever}
+BuildRequires:	kf6-kdoctools-devel >= %{kdeframever}
+BuildRequires:	kf6-ki18n-devel >= %{kdeframever}
 BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	tar >= 1:1.22
@@ -35,10 +35,10 @@ BuildRequires:	xz
 Requires:	Qt6DBus >= %{qtver}
 Requires:	Qt6Xml >= %{qtver}
 Requires:	kf6-dirs
-Requires:	kf6-kconfig >= %{version}
-Requires:	kf6-kcoreaddons >= %{version}
-Requires:	kf6-kdbusaddons >= %{version}
-Requires:	kf6-ki18n >= %{version}
+Requires:	kf6-kconfig >= %{kdeframever}
+Requires:	kf6-kcoreaddons >= %{kdeframever}
+Requires:	kf6-kdbusaddons >= %{kdeframever}
+Requires:	kf6-ki18n >= %{kdeframever}
 #Obsoletes:	kf5-%{kfname} < %{version}
 %requires_eq_to Qt6Core Qt6Core-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -56,8 +56,8 @@ Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	cmake >= 3.16
-Requires:	kf6-kconfig-devel >= %{version}
-Requires:	kf6-kcoreaddons-devel >= %{version}
+Requires:	kf6-kconfig-devel >= %{kdeframever}
+Requires:	kf6-kcoreaddons-devel >= %{kdeframever}
 #Obsoletes:	kf5-%{kfname}-devel < %{version}
 
 %description devel
@@ -103,6 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/qlogging-categories6/kservice.renamecategories
 %attr(755,root,root) %{_bindir}/kbuildsycoca6
 %{_mandir}/ca/man8/kbuildsycoca6.8*
+%{_mandir}/ca@valencia/man8/kbuildsycoca6.8*
 %{_mandir}/es/man8/kbuildsycoca6.8*
 %{_mandir}/fr/man8/kbuildsycoca6.8*
 %{_mandir}/it/man8/kbuildsycoca6.8*
