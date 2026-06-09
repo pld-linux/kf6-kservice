@@ -50,6 +50,11 @@ KService provides a plugin framework for handling desktop services.
 Services can be applications or libraries. They can be bound to MIME
 types or handled by application specific code.
 
+%description -l pl.UTF-8
+KService dostarcza szkieletu wtyczek do obsługi usług pulpitu.
+Usługami mogą być aplikacje lub biblioteki. Mogą one być przypisane do
+typów MIME lub obsługiwane przez kod określony przez aplikację.
+
 %package devel
 Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
